@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover list</title>
+    <style>
+        #UL li ul li{display: none;}
+        #UL li:hover ul li{display: block;}
+        #UL li:hover ul li ul li{display: none;}
+        #UL li ul li:hover ul li{display: block;}
+        #UL li ul li:hover ul li ul li{display: none;}
+        #UL li ul li ul li:hover ul li{display: block;}
+    </style>
+</head>
+<body>
+    <div id="UL">
+        <li>
+            google
+            <ul>
+                <li>
+                    gmail
+                    <ul>
+                        <li>
+                            sign up
+                        </li>
+                        <li>
+                             sign in 
+                             <ul>
+                                <li>
+                                    sign in as admin
+                                </li>
+                                <li>
+                                    sign out as mamber
+                                </li>
+
+                             </ul>                       
+                        </li>
+                    </ul>
+                </li>
+                <li>gmap</li>
+                <li>gdrive</li>
+            </ul>
+
+        </li>
+        <li>facebook</li>
+        <li>instagram</li>
+        <ul>
+            <li>link in</li>
+            <li>link out</li>
+        </ul>
+    </li>
+    <li>amazon</li>
+    <li>flipcart
+        <ul>
+            <li>abps</li>
+            <li>aws</li>
+            <li>abvp</li>
+        </ul>
+    </li>
+    </div>
+</body>
+</html>

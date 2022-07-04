@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container-img{
+            position: relative;
+            width: 300px;
+        }
+
+        .image{
+            width: 300px;
+            height: 400px;
+            transition: 1s;
+        }
+
+        .overlay{
+            top: 0%;
+            right: 0%;
+            left: 0%;
+            bottom: 0%;
+            height: 100%;
+            opacity: 0;
+            transition: 1s;
+            background-color: rgba(0,0,0,0.7);
+        }
+
+        .container-img:hover .overlay{
+            opacity: 1;
+        }
+
+        .container-img:hover .image{
+            transform: rotate(360deg);
+        }
+
+        .text{
+            color: yellow;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            text-align: center;
+            transform: translate(-50%,-50%);
+            -webkit-transform:translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+            -o-transform: translate(-50%,-50%);
+            -moz-transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+<body>
+    <h1>image overlay effect</h1>
+    <div class="container-img">
+        <img src="image1.jpg" alt="demo image" class="image">
+        <div class="overlay">
+            <div class="text">DHRUV SHAH</div>
+        </div>
+    </div>
+</body>
+</html>
