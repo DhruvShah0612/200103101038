@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function demoInternalAlert(){
+            alert("Internal Alert..");
+        }
+
+        function demoInternalConfirm(){
+            if(confirm("are you sure..?")){
+                alert("yes");
+            }
+            else{
+                alert("no");
+            }
+        }
+
+        function demoInternalPrompt(){
+            var fName=prompt("Enter first name here..");
+            var lName=prompt("Enter Last name here..");
+            alert(fName+" "+lName);
+        }
+
+        function bodyBGYellow(){
+            document.body.style.backgroundColor="Yellow";
+        }
+
+        function divBGPurple(){
+            document.getElementById("d1").style.backgroundColor="purple";
+        }
+
+        function divBGDynamic(){
+            document.getElementById("d1").style.backgroundColor=("enter color name here..");
+        }
+
+        function bodyBGDynamic(){
+            document.body.style.backgroundColor=("enter color name here..");
+        }
+
+        function bodyBGCP1(){
+            document.body.style.backgroundColor=document.getElementById("CP1").value;
+        }
+
+        function divBGCP2(){
+            document.getElementById("d1").style.backgroundColor=document.getElementById("CP2").value;
+        }
+        
+        </script>
+
+        <script src="script.js"></script>
+
+    <style type="text/css">
+        body{
+            background-color:grey;
+        }
+        div{
+            background-color: lightcyan;
+            height: 300px;
+            width: 300px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="d1">DHRUV SHAH</div>
+    <input type="button" value="alert inline" onclick="alert('hello students')">
+    <input type="button" value="confirm inline" onclick="confirm('are you sure...?')">
+    <input type="button" value="prompt inline" onclick="prompt('enter your name..')"> 
+    <hr>
+    <input type="button" value="alert internal" onclick="demoInternalAlert()">
+    <input type="button" value="confirm internal" onclick="demoInternalConfirm()">
+    <input type="button" value="prompt internal" onclick="demoInternalPrompt()">
+    <hr>
+    <input type="button" value="alert external" onclick="demoExternalAlert()">
+    <input type="button" value="confirm external" onclick="demoExternalConfirm()">
+    <input type="button" value="prompt external" onclick="demoExternalPrompt()">
+    <hr>
+    <input type="button" value="body bg yellow" onclick="bodyBGYellow()">
+    <input type="button" value="div bg Purple" onclick="divBGPurple()">
+    <hr>
+    <input type="button" value="body bg prompt" onclick="bodyBGDynamic()">
+    <input type="button" value="div bg prompt" onclick="divBGDynamic()">
+    <hr>
+    <input type="color" id="CP1" onchange="bodyBGCP1()">
+    <input type="color" id="CP2" onchange="divBGCP2()">
