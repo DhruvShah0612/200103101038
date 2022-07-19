@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        #box {
+            position: relative;
+        }
+        button{
+            cursor:pointer;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#d1').click(function () {
+                $('img').animate({height:'toggle'});
+            });
+
+            $('#d2').click(function () {
+                $('img').animate({
+                    left: '300px',
+                    width: '150px',
+                    height: '150px'
+                });
+            });
+
+            $('#d3').click(function () {
+                $('img').animate({
+                    width: '150px',
+                    height: '150px',
+                    opacity: '0.5'
+                });
+                $('img').animate({
+                    width: '350px',
+                    height: '350px',
+                    opacity: '0.7'
+                });
+                $('img').animate({
+                    width: '150px',
+                    height: '150px',
+                    opacity: '1'
+                });
+            });
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <h1>JQUERY ANIMATE METHOD</h1>
+    <img src="image.png" height="200px">
+    <br>
+    <button id="d1">Animation1</button>
+    <button id="d2">Animation2</button>
+    <button id="d3">Animation3</button>
+</body>
+
+</html>

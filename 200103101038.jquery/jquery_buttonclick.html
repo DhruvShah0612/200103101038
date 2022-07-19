@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>buttonclick</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        #box{
+            border: 2px solid red;
+            height: 200px;
+            width: 230px;
+            text-align: center;
+        }
+    </style>
+    
+    <script>
+         $(document).ready(function(){
+            $("#buttonShow").attr("disabled",true);
+            $("#buttonHide").click(function(){
+                if(confirm("are you sure...?"))
+                {
+                    $("#box").hide(3000);
+                    $(this).attr("disabled",true);
+                    $("#buttonShow").attr("disabled",false);
+                    $("#buttontoggle").text("Show");
+                }
+            });
+            $("#buttonShow").click(function(){
+                if(confirm("are you sure...?"))
+                {
+                    $("#box").Show(3000);
+                    $(this).attr("disabled",true);
+                    $("#buttonHide").attr("disabled",false);
+                    $("#buttontoggle").text("Hide");
+                }
+            });
+
+            $("#buttontoggle").click(function(){
+                if(confirm("are you sure...?"))
+                {
+                    $("#box").toggle(3000);
+                    ($(this).text()=="Hide")
+                            ?($(this).text("Show"),$("#buttonHide").attr("disabled",true),$("#buttonShow").attr("disabled",false))
+							:($(this).text("Hide"),$("#buttonHide").attr("disabled",false),$("#buttonShow").attr("disabled",true))
+                }
+            });
+            $("#plus").click(function () {
+                var MDH = parseInt($("img").css("height"));
+                if (MDH <= 500) {
+                    MDH += 10;
+                    $("img").css("height", MDH);
+                    $("img").css("width", MDH);
+                }
+                else {
+                    alert("More than 500px is not possible.");
+                }
+            });
+
+            $("#minus").click(function () {
+                var MDH = parseInt($("img").css("height"));
+                if (MDH >= 70) {
+                    MDH -= 10;
+                    $("img").css("height", MDH);
+                    $("img").css("width", MDH);
+                }
+                else {
+                    alert("Less than 70px is not possible.");
+                }
+            });
+        });
+    </script>
+    
+</head>
+<body>
+    <h1>JQUERY HIDE AND SHOW METHOD</h1>
+    <div id="box">
+        <img src="image.png">
+    </div>
+    <br>
+    <br>
+    <button id="buttonHide">Hide</button>&nbsp;&nbsp; 
+    <button id="buttonShow">Show</button><br><br>
+    <button id="buttontoggle">Hide</button><br><br>
+    <button id="plus">+</button>
+    <button id="minus">-</button>
+
+    
+</body>
+</html>

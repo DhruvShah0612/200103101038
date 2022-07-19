@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade method</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#fadeoutbtn').click(function(){
+                $('#d1').fadeOut("slow");
+            });
+
+            $('#fadeinbtn').click(function(){
+                $('#d1').fadeIn("slow");
+            });
+
+            $('#fadetogglebtn').click(function(){
+                $('#d1').fadeToggle("slow");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>jQUERY FADE METHOD</h1>
+    <div id="d1">
+        <img src="image.png" alt="">
+    </div>
+    <br>
+    <br>
+    <button id="fadeoutbtn">FadeOut</button>
+    <button id="fadeinbtn">FadeIn</button>
+    <button id="fadetogglebtn">FadeToggle</button>
+</body>
+</html>
