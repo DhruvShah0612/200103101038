@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title> bootstrap form</title>
+    <style>
+        #container {
+            border: 2px solid gray;
+            border-radius: 1rem;
+            padding: 1rem;
+            margin: 1rem;
+        }
+        #container h2 {
+            text-align: center;
+        }
+        #bdate,#country{
+            width:fit-content;
+        }
+        #footer{
+            text-align: center;
+        }
+        #submit{
+            background-color: lightcyan;
+        }
+        @media (max-width:900px) And (min-width:650px) {
+            #container {
+                margin: 1rem 5rem;
+            }
+        }
+
+        @media (min-width:900px) {
+            #container {
+                margin: 1rem 10rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h2>SUBMIT FORM</h2>
+        <hr>
+        <form>
+            <div class="mb-3">
+                <label for="fname" class="form-label">First Name</label>
+                <input type="text" class="form-control" id="fname" placeholder="Enter Your First Name">
+            </div>
+            <div class="mb-3">
+                <label for="lname" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="lname" placeholder="Enter Your Last Name">
+            </div>
+            
+            <div class="mb-3">
+                <label for="bdate" class="form-label">Birth Date</label>
+                <input type="date" class="form-control" id="bdate">
+            </div>
+
+            <div class="mb-3">
+                <label for="country" class="form-label">Country</label>
+                <select id="country" class="form-select" aria-label="Default select example">
+                    <option selected>India</option>
+                    <option value="1">Japan</option>
+                    <option value="2">USA</option>
+                    <option value="3">Australia</option>
+                    <option value="4">UK</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Email">
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputcontactno1" class="form-label">Contact No.</label>
+                <input type="contactno" class="form-control" id="exampleInputcontactno1" placeholder="Enter Your Contact Number">
+            </div>
+
+
+
+            <div id="footer">
+                <button id="submit" type="submit" class="btn">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+</body>
+</html>
