@@ -1,0 +1,35 @@
+<!doctype html>  
+<html lang="en">  
+   <head>  
+      <meta charset="utf-8">  
+      <title>jQuery UI Spinner functionality</title>  
+      <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>  
+      <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+      <style type="text/css">  
+         #spin-1,#spin-2 input {width: 50px}  
+      </style>  
+      <script>  
+         $(function() {  
+            $( "#spin-1" ).spinner({  
+               min: -20,   
+               max: 20  
+            });  
+            $('#spin-2').spinner({  
+               step: 200,   
+               min: -10000,   
+               max: 10000  
+            });  
+         });  
+      </script>  
+   </head>  
+   <body>  
+      <!-- HTML -->   
+      <div id="spnr">  
+         Min and Max value set:  
+         <input type="text" id="spin-1" value="1" /><br><br>  
+         Increments/decrements in step of 200:  
+         <input type="text" id="spin-2" value="200" />  
+      </div>  
+   </body>  
+</html>

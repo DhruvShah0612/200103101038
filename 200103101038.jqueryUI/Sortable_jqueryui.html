@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY UI SORTABLE</title>
+    <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet">
+    <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    
+    <style>
+       #d1, #d2 { list-style-type: none; 
+          margin: 0; padding: 0; width: 80%; }
+       #d1 li, #d2 li { margin:10px; 
+          padding:20px;
+          font-size: 17px; height: 16px; }
+       .D1{
+          background: aqua;
+          border: 1px solid #DDDDDD;
+          color: #333333;
+       }
+       
+    </style>
+    
+    <script>
+        $(document).ready(function () {
+            
+            $("#d1").sortable();
+          
+            $("#d2").sortable();
+            
+            $("#d1").sortable({
+                connectWith: "#d2, #d1"
+            });
+            
+            $("#d2").sortable({
+                connectWith: "#d1, #d2"
+            });
+           
+        });
+    </script>
+</head>
+<body>
+    <div class = "wrap">
+        <div class = "wrap1"> 
+           <h3>List 1</h3>
+           <ul id = "d1">
+              <li class = "D1">A</li>
+              <li class = "D1">B</li>
+              <li class = "D1">C</li>
+              <li class = "D1">D</li>
+           </ul>
+        </div>
+        <div class = "wrap1">
+           <h3>List 2</h3> 
+           <ul id = "d2">
+              <li class = "D1">a</li>
+              <li class = "D1">b</li>
+              <li class = "D1">c</li>
+              <li class = "D1">d</li>
+           </ul>
+        </div>
+     </div>
+     <hr />
+     <span id = result></span>
+</body>
+</html>

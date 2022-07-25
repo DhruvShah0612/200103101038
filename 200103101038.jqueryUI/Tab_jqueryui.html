@@ -1,0 +1,42 @@
+
+<!doctype html>  
+<html lang="en">  
+   <head>  
+      <meta charset="utf-8">  
+      <title>jQuery UI Tabs </title>  
+      <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>  
+      <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+      <script>  
+         $(function() {  
+            $( "#tab-1" ).tabs();  
+         });  
+      </script>  
+      <style>  
+         #tab-1{font-size: 18px;}  
+         .ui-widget-header {  
+            background:crimson;  
+            border: 2px solid black;  
+         }  
+      </style>  
+   </head>  
+   <body>  
+      <div id="tab-1">  
+         <ul>  
+            <li><a href="#tab-2">Flower</a></li>  
+            <li><a href="#tab-3">Fruit</a></li>  
+            <li><a href="#tab-4">Vegetable</a></li>  
+         </ul>  
+         <div id="tab-2">  
+<p>The seed-bearing part of a plant, consisting of reproductive organs (stamens and carpels) that are typically surrounded by a brightly coloured corolla (petals) and a green calyx (sepals).  
+</p>  
+         </div>  
+         <div id="tab-3">  
+<p>The sweet and fleshy product of a tree or other plant that contains seeds and can be eaten as food.</p>  
+         </div>  
+         <div id="tab-4">  
+            <p>A plant or part of a plant used as food, such as cabbage, potato, turnip, or bean.</p>  
+         </div>  
+      </div>  
+   </body>  
+</html>
